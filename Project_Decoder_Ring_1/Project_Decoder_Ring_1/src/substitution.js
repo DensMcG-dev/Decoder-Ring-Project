@@ -6,11 +6,11 @@
 const substitutionModule = (function () {
 
   function substitution(input, alphabet, encode = true) {
-    if(alphabet === undefined) return false;//checks if input substitution alphabet exists
-    if(alphabet.length !== 26) return false;//checks if input substitution alphabet is proper number of characters
+    if(alphabet === undefined) return false;//checks if substitution alphabet exists
+    if(alphabet.length !== 26) return false;//checks if substitution alphabet is proper number of characters
     for (letter of alphabet){ //unique letter's index will always equal last index
       if(alphabet.indexOf(letter) != alphabet.lastIndexOf(letter)) return false;
-    }//checks if input contains duplicated characters
+    }//checks if sub alphabet contains duplicated characters
     let alphString = "abcdefghijklmnopqrstuvwxyz";//base string of real alphabet
     let lowerCase = input.toLowerCase();//ignores capital letters
     let finalMessage = [];
