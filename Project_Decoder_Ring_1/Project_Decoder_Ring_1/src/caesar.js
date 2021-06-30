@@ -18,11 +18,7 @@ const caesarModule = (function () {
       if(letterArray[i] === " ") {
         asciiValueArray.push(32);
       }
-      else if(isNaN(letterArray[i])) {
-        let ascii = letterArray[i].charCodeAt();
-        asciiValueArray.push(ascii);
-      }
-      else if(!isNaN(letterArray[i])) {
+      else {
         let ascii = letterArray[i].charCodeAt();
         asciiValueArray.push(ascii);
       }
